@@ -1,0 +1,28 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.user-dashboard {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.users {
+  flex-basis: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+.pagination-component {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 4px;
+}
+

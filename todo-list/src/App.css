@@ -1,0 +1,34 @@
+#root {
+  
+  margin: 0 auto;
+  padding: 2rem;
+  
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 8px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.todo-value {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 4px 8px;
+  margin: 0;
+  border: none;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.todo-edit-input {
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+

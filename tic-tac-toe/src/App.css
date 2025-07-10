@@ -1,0 +1,18 @@
+#root {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.game-board {
+  display: grid;
+  gap: 4px;
+}
+
+.board-tile {
+  border: 1px solid black;
+  padding: 4px;
+  width: 40px;
+  height: 40px;
+  background-color: beige;
+}
+

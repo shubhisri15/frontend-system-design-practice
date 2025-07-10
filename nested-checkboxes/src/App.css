@@ -1,0 +1,10 @@
+.checkbox {
+  padding-left: 20px;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}

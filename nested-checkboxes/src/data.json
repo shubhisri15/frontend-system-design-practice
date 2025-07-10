@@ -1,0 +1,50 @@
+{
+    "checkboxes": [{
+        "id": 1,
+        "label": "Fruits",
+        "children": [
+            {
+                "id": 2,
+                "label": "Citrus",
+                "children": [
+                    {
+                        "id": 3,
+                        "label": "Lemon",
+                        "children": []
+                    },
+                    {
+                        "id": 4,
+                        "label": "Orange",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "label": "Berries",
+                "children": [
+                    {
+                        "id": 6,
+                        "label": "Strawberry",
+                        "children": []
+                    },
+                    {
+                        "id": 7,
+                        "label": "Blueberry",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "label": "Banana",
+                "children": []
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "label": "Vegetables",
+        "children": []
+    }]
+}
