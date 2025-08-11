@@ -1,29 +1,24 @@
-function myDebounce(func, delay) {
-    let timer = null
-    let context = undefined
-    let fnArgs = undefined
+function myDebounceTwo(func, delay) {
+    let timer
+    let latestArgs
 
-    function invoke() {
-        if(timer === null) return
-
-        clearTimer()
-        func.apply(context, fnArgs)
+    function debounced(...args) {
+        latestArgs = args
+        if(timer) clearTimeout(timer)
+        timer = setTimeout(() => func(...args), delay)
     }
 
-    function clearTimer() {
+    debounced.flush = () => {
+        if (!latestArgs) return
+        clearTimeout(timer)
+        timer = null
+        func(...latestArgs)
+    }
+
+    debounced.cancel = () => {
         clearTimeout(timer)
         timer = null
     }
 
-    function fn(...args) {
-        clearTimer()
-        context = this
-        fnArgs = args
-        setTimeout(() => invoke(), delay)
-    }
-
-    fn.cancel = clearTimer
-    fn.flush = invoke
-
-    return fn
+    return debounced
 }

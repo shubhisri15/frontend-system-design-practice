@@ -1,23 +1,26 @@
 class EventEmitter {
     constructor() {
-        this.events = []
+        this.events = {}
     }
-
+    
+    // if event name does not exist, add it to array, and push listener to the result array
     on(eventName, listener) {
         if(this.events[eventName]) {
-            this.events[eventName].push(listener)
+            this.events[eventName].push(listener) 
         } else {
             this.events[eventName] = [listener]
         }
     }
 
     off(eventName, listener) {
-        this.events[eventName] = this.events[eventName].filter(l => l !== listener)
+        if (!this.events[eventName]) return
+        this.events[eventName] = this.events[eventName].filter(l => l !== listener) //remove the listener from eventName's listener list 
     }
 
     emit(eventName, ...args) {
         if(this.events[eventName]) {
-            this.events[eventName].forEach(listener => listener(...args))
+            this.events[eventName].forEach(listener => listener(...args)) // call all listeners attached to the event
+            return true
         } else {
             return false
         }

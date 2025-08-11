@@ -6,6 +6,15 @@ function myDebounce(func, delay) {
     }
 }
 
+function myDebounceReturnsPromise(func, delay) {
+    let timer
+    return function (...args) {
+        return new Promise(resolve => {
+            timer = setTimeout(() => resolve(func(...args)), delay)
+        })
+    }
+}
+
 function search(query) {
     console.log(query)
 }
