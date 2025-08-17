@@ -30,7 +30,12 @@ class MyPromise {
             const { onFulfilled, onRejected, resolve, reject } = handler
             try {
                 if (this.state === 'fulfilled') {
-                    resolve(onFulfilled ? resolve(onFulfilled(this.value)) : resolve(this.value)) // we run the fulfilled function on resolve, or directly resolve with value
+                    if (onFulfilled) {
+                        const result = onFulfilled(this.value);
+                        resolve(result);
+                    } else {
+                        resolve(this.value);
+                    } // we run the fulfilled function on resolve, or directly resolve with value
                 } else {
                     if (onRejected) {
                         resolve(onRejected(this.value)) // we run the rejected function on resolve of the reject, or directly reject with value

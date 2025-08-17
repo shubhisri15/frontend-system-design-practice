@@ -27,4 +27,13 @@ class LRUCache {
 
         this.cache.set(key, value)
     }
+
+    peek(key) {
+        if (!this.cache.has(key)) return -1
+        return this.cache.get(key)
+    }
+
+    delete(key) {
+        this.cache.delete(key)
+    }
 }
