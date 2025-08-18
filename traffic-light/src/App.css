@@ -1,0 +1,41 @@
+#root {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.light-container {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: rgb(42, 42, 42);
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.light {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 150px;
+  aspect-ratio: 1;
+  background-color: white;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.light-variations {
+  display: flex;
+  
+}
