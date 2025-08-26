@@ -11,11 +11,11 @@ export default function TrafficLightIrregular() {
         let current = 0
 
         function changeColor() {
-        setLightColor(colors[current])
-        timer = setTimeout(() => {
-            current = (current + 1) % colors.length
-            changeColor()
-        }, intervals[current])
+            setLightColor(colors[current])
+            timer = setTimeout(() => {
+                current = (current + 1) % colors.length
+                changeColor()
+            }, intervals[current])
         }
 
         changeColor()
