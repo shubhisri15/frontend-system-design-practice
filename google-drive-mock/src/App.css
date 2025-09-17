@@ -1,0 +1,41 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.node {
+  padding: 0.5rem;
+  height: 8rem;
+}
+
+.file {
+  background-color: aliceblue;
+}
+
+.folder {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.crumb {
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.crumb:hover {
+  background-color: beige;
+}
+
