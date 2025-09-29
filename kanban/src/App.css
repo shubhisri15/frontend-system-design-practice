@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.column-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.column {
+  border: 1px solid black;
+  flex-grow: 1;
+  height: 80vh;
+  padding: 12px;
+}
+
+.task {
+  border: 1px solid black;
+}
