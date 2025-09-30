@@ -1,0 +1,40 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hour {
+  border: 1px solid darkcyan;
+  margin: -1px -1px 0 0;
+}
+
+.calendar-grid {
+  display: grid;
+  height: 80vh;
+}
+
+header {
+  display: flex
+}
+
+/* 
+const today = new Date().toLocaleString("en-US", { month: "long", year: "numeric" })
+
+  return (
+    <main>
+      <header>
+        <h1>{today}</h1>
+      </header>
+      <div className='calendar-grid' style={{ gridTemplateColumns: 'repeat(7, 1fr)'}}>
+        {Array.from({ length: 12 }).map((_, hourIdx) => {
+          return Array.from({ length: 7}).map((_, dayIdx) => {
+            return <div className='hour' key={`${hourIdx}-${dayIdx}`}></div>
+          })
+        })}
+      </div>
+    </main>
+
+
+*/
