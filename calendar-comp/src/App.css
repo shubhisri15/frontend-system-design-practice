@@ -19,6 +19,17 @@ header {
   display: flex
 }
 
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 16px;
+  gap: 16px;
+  background-color: aliceblue;
+}
+
 /* 
 const today = new Date().toLocaleString("en-US", { month: "long", year: "numeric" })
 

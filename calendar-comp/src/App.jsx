@@ -7,7 +7,7 @@ import EventModal from './components/EventModal'
 
 function App() {
 
-  const [modalOpen, setModalOpen] = useState(false)
+  const [modalOpen, setModalOpen] = useState(true)
   const [events, setEvents] = useState(initialEvents)
 
   const addNewEvent = () => {}
